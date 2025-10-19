@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JL Altoras</title>
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="inner">
+      <!-- Logo section -->
+      <div class="logo">
+        <h2>JL <samp>Altoras</samp></h2>
+      </div>
+
+      <!-- Responsive navigation toggle (hamburger menu) -->
+      <button class="nav-toggle" aria-controls="nav-item" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <!-- Navigation links -->
+      <nav class="nav" role="navigation">
+        <ul id="nav-item">
+          <li class="home"><a href="#home">Home</a></li>
+          <li class="about"><a href="#about">My Profile</a></li>
+          <li class="services"><a href="#projects">Activities</a></li>
+          <li class="info"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO SLIDER ================= -->
+  <section class="hero-slider" aria-label="Featured">
+    <div class="slides">
+      <!-- Slide 1: Main intro -->
+      <article class="slide active" data-index="0" aria-hidden="false">
+        <div class="slide-inner">
+          <h1>Design. Build. Ship.</h1>
+          <p>Creating sleek, modern web experiences for your brand.</p>
+          <a class="btn" href="#projects">Achievement</a>
+        </div>
+      </article>
+      <!-- Slide 2: Performance -->
+      <article class="slide" data-index="1" aria-hidden="true">
+        <div class="slide-inner">
+          <h1>Performance First</h1>
+          <p>Fast, accessible, and resilient solutions.</p>
+          <a class="btn" href="#about">Learn More</a>
+        </div>
+      </article>
+      <!-- Slide 3: Scaling -->
+      <article class="slide" data-index="2" aria-hidden="true">
+        <div class="slide-inner">
+          <h1>Scale with Confidence</h1>
+          <p>From prototypes to production-ready systems.</p>
+          <a class="btn" href="#contact">Get in Touch</a>
+        </div>
+      </article>
+    </div>
+    <!-- Slider navigation buttons -->
+    <button class="slider-btn prev" aria-label="Previous slide">&larr;</button>
+    <button class="slider-btn next" aria-label="Next slide">&rarr;</button>
+    <!-- Slider dots for navigation -->
+    <div class="dots" role="tablist" aria-label="Slide controls">
+      <button class="dot active" data-slide="0" aria-selected="true" aria-label="Slide 1"></button>
+      <button class="dot" data-slide="1" aria-selected="false" aria-label="Slide 2"></button>
+      <button class="dot" data-slide="2" aria-selected="false" aria-label="Slide 3"></button>
+    </div>
+  </section>
+
+  <main>
+    <!-- ================= PROFILE FEATURE SECTION ================= -->
+    <section class="feature" id="about">
+      <div class="container two-col">
+        <!-- Profile image -->
+        <aside class="feature-image" aria-labelledby="feature-title">
+          <img class="photo-placeholder" src="./pictures/Prof3.jpg" alt="Profile or featured project image" loading="lazy">
+        </aside>
+        <!-- Profile text and info -->
+        <article class="feature-text">
+          <h2 id="feature-title">My Profile</h2>
+          <div class="meta">Design • Front-end • Accessibility</div>
+          <p id="contentContainer">
+            Hello! I'm John-Le, a dedicated 3rd-year student pursuing a Diploma in Information Technology
+            at Davao del Sur State College (DSSC).<br>I am building my skills in software development,
+            networking, and problem-solving to prepare for a career in the tech industry.<br>I'm always eager 
+            to learn more and connect with fellow students and professionals. 
+            Feel free to explore my profile or get in touch!        
+          </p>
+          <button class="btn" id="btnReadMore" href="#projects">Read More</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= ACTIVITIES / PROJECTS SECTION ================= -->
+    <section id="projects" class="accomplishments" aria-labelledby="projects-heading">
+      <div class="container">
+        <h3 id="projects-heading" class="section-title">COMPILATION</h3>
+        <div class="card-grid" role="list">
+          <!-- Project 1 Card -->
+          <div class="card" role="listitem">
+            <div class="card-img" style="background-image:url('./codes/Act1.png')" role="img" aria-label="Project 1 screenshot"></div>
+            <h4>Activity 1: Web Profile</h4>
+            <p>It showcases my skills and projects as a web developer and my informations.</p>
+            <div class="card-actions">
+              <a class="btn small" data-project="1" href="codes.html" target="_blank" rel="noopener noreferrer">View</a>
+              <a class="btn small outline" href="https://github.com/IamJohnle/ProjectCode.git" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+          <!-- Project 2 Card -->
+          <div class="card" role="listitem">
+            <div class="card-img" style="background-image:url('./pictures/act2.png')" role="img" aria-label="Project 2 screenshot"></div>
+            <h4>Activity 2: Hover</h4>
+            <p>First to practice hover effects using CSS and first animated project to learn.</p>
+            <div class="card-actions">
+              <a class="btn small" data-project="2" href="hover.html" target="_blank" rel="noopener noreferrer">View</a>
+              <a class="btn small outline" href="https://github.com/IamJohnle/ProjectCode.git" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+          <!-- Project 3 Card -->
+          <div class="card" role="listitem">
+            <div class="card-img" style="background-image:url('./pictures/Act3.png')" role="img" aria-label="Project 3 screenshot"></div>
+            <h4>Activity 3: About Me(Hover)</h4>
+            <p>A simple "About Me" webpage with hover effects to enhance user interaction.</p>
+            <div class="card-actions">
+              <a class="btn small" data-project="3" href="abtme.html" target="_blank" rel="noopener noreferrer">View</a>
+              <a class="btn small outline" href="https://github.com/IamJohnle/ProjectCode.git" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+          <!-- Project 4 Card -->
+          <div class="card" role="listitem">
+            <div class="card-img" style="background-image:url('./pictures/Act4.png')" role="img" aria-label="Project 4 screenshot"></div>
+            <h4>Activity 4: Dark Mode</h4>
+            <p>A simple dark mode toggle implemented with CSS variables and JavaScript.</p>
+            <div class="card-actions">
+              <a class="btn small" data-project="4" href="darckmode.html" target="_blank" rel="noopener noreferrer">View</a>
+              <a class="btn small outline" href="https://github.com/IamJohnle/ProjectCode.git" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
+      <div class="container contact-grid">
+        <!-- Contact image -->
+        <div class="contact-visual">
+          <img class="contact-photo" src="./pictures/Prof3.jpg" alt="Profile photo" loading="lazy">
+        </div>
+        <!-- Contact info and feedback form -->
+        <div class="contact-info">
+          <h3 id="contact-heading">Get in touch</h3>
+          <p>Email: <a href="mailto:johnlealtoras@gmail.com">johnlealtoras@gmail.com</a></p>
+          <p>Phone: 09460127773</p>
+          <p>Lopez Jeana Ext. Brgy.Zone1, Digos City, Davao del Sur</p>
+          <br>
+          <h3>Your Feedback</h3>
+          <!-- Feedback form -->
+          <form id="contact-form" class="contact-form" action="#" method="POST" novalidate>
+            <label for="c-name">Name</label>
+            <input id="c-name" name="name" type="text" required>
+            <label for="c-email">Email</label>
+            <input id="c-email" name="email" type="email" required>
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" rows="4" required></textarea>
+            <button class="btn" type="submit">Send</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <p>© 2023 John-Le. All rights reserved.</p>
+  </footer>
+
+  <!-- ================= MAIN SCRIPT ================= -->
+  <script src="script.js"></script>
+</body>
+</html>
