@@ -1,0 +1,709 @@
+/* Fixed / cleaned stylesheet for home.html slider, colors and header */
+
+/* Fonts */
+@font-face {
+    font-family: 'Jockeyone';
+    src: url('./fonts/JockeyOne-Regular.ttf') format('truetype'),
+        url('./fonts/JockeyOne-Regular.ttf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Variables */
+:root{
+    --bg-petal: #FCFFF1;
+    --text-pearl-black: #0b0b0b;
+    --btn-color: #E3D095;
+    --header-height: 72px;
+}
+
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body{
+    font-family: 'Jockeyone', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    background: var(--bg-petal);
+    color: var(--text-pearl-black);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* Header */
+header{
+    position: fixed;
+    top: 25px;
+    left: 100px;
+    right: 0;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    background: transparent; /* keep page light background visible */
+    z-index: 10;
+}
+.logo {
+    font-size: 35px;
+    font-weight: 700;
+    color: var(--text-pearl-black);
+    text-decoration: none;
+}
+.logo span { color: var(--text-pearl-black); }
+.logo span:hover { color: #E3D095; text-decoration: none; }
+
+.nav-container { 
+    margin: 0;
+    margin-right: 150px; 
+}
+.nav-links {
+    
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    list-style: none;
+}
+.nav-links li a {
+    
+    color: var(--text-pearl-black);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 6px 8px;
+}
+.nav-links li a:hover { color: #E3D095; }
+
+/* Content spacing to avoid header overlap */
+main { padding-top: calc(var(--header-height) + 12px); }
+
+/* Slider: layout and behavior */
+/* Container keeps height responsive; adjust if you want larger artwork */
+.hero-slider{
+    position: relative;
+    width: 100%;
+    height: calc(90vh - var(--header-height));
+    min-height: 360px;
+    max-height: 720px;
+    overflow: hidden;
+    display: block;
+    margin-top: 8%;
+    
+}
+
+/* Use 5 slides => container width 500% and each slide 20% of that container */
+.slides{
+    display: flex;
+    width: 500%;
+    height: 100%;
+    animation: slide 25s infinite;
+    will-change: transform;
+  
+}
+
+/* Each slide occupies viewport width visually (flex-basis 10% of .slides which equals 100% of viewport) */
+.slide{
+    flex: 0 0 20%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* pushes image to the right side */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.slide img{
+    width: 50%; /* control how large the character appears */
+    height: 100%;
+    object-fit: contain;
+    margin-right: 5%;
+}
+/* light overlay to improve text contrast on bright background */
+.overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.15);
+    pointer-events: none;
+}
+
+/* Text placed on each slide */
+.text{
+    position: absolute;
+    bottom: 0px;
+    top: 200px;
+    left: 100px; /* moved slightly to the right */
+    color: var(--text-pearl-black);
+    z-index: 0;
+    max-width: 48%;
+}
+.text h1{
+  font-size: 40px;
+  margin: 0 0 0px;
+}
+.text p{
+  margin: 0;
+  font-size: 20px;
+  color: rgba(11,11,11,0.9);
+}
+
+/* Buttons and CTA */
+button, .cta, .activity .actions button{
+    background: var(--btn-color);
+    color: var(--text-pearl-black);
+    border: 2px solid #000;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-weight: 700;
+}
+
+.see-more-btn {
+    background-color: #E3D095; /* beige tone from your screenshot */
+    border: 2px solid #000;
+    border-radius: 8px;
+    color: #000;
+    font-weight: normal;
+    padding: 10px 21px;
+    cursor: pointer;
+    font-family:'Jockeyone';
+    font-size: 30x; /* adjust this value */
+
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    margin-top: 10px;
+  }
+
+  .see-more-btn:hover {
+    background-color: #d9c788;
+    transform: scale(1.05);
+  }
+
+  .introduction{
+    padding-left: 100px;
+    padding-top: 200px;
+    position: relative;
+    display: block;
+}
+  /* Optional: keeps your image and text aligned side-by-side */
+  .profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .intro-text {
+  width: 55%;
+  display: flex;
+  flex-direction: column; /* stack paragraph and button vertically */
+  align-items: flex-start; /* keep text/button aligned left */
+}
+
+
+  .intro {
+    width: 55%;
+    margin-bottom: 20px; 
+  }
+
+.intro-pic {
+    margin-top:-10%;
+    margin-left: 0;
+    margin-right: 200px;
+    width: 26%;
+    height: auto;
+}
+  #profile-btn {
+  margin-top: 0;
+}
+
+.profile-info {
+  background-color: #FCFFF1; /* soft light tone to separate the section */
+  padding: 130px 100px;
+  text-align: left;
+  
+}
+
+.profile-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.profile-details {
+  list-style: none;
+  line-height: 1.8;
+  font-size: 18px;
+  color: #333;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.profile-details li strong {
+  color: #000;
+}
+
+.back-btn {
+  padding: 8px 18px;
+  font-size: 16px;
+}
+.profile-info {
+  background-color: #f8f8f8;
+  padding: 130px 100px;
+  
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.profile-text {
+    margin-left: 100px;
+    flex: 1;
+    text-align: left;
+}
+
+.profile-pic {
+  width: 28%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  object-fit: cover;
+  margin-right: 100px; /* moves it slightly inward from the right edge */
+}
+
+.profile-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.profile-details {
+  list-style: none;
+  line-height: 1.8;
+  font-size: 18px;
+  color: #333;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.profile-details li strong {
+  color: #000;
+}
+
+.back-btn {
+  padding: 8px 18px;
+  font-size: 16px;
+}
+/* --- Slider Navigation Buttons --- */
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none; /* allows slide clicks */
+  z-index: 10;
+}
+
+.slide-prev,
+.slide-next {
+  pointer-events: auto;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  color: #FDA400;
+  font-size: 40px;
+  font-weight: bold;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.slide-prev:hover,
+.slide-next:hover {
+  background: #E3D095; /* gold tone to match your theme */
+  color: #00000000;
+  transform: scale(1.1);
+}
+
+/* Adjust positions slightly inside the edges */
+.slide-prev {
+  margin-left: 25px;
+}
+
+.slide-next {
+  margin-right: 25px;
+}
+
+/*Activity Section*/
+/* --- Activities Section --- */
+.activities-section {
+  padding: 100px;
+  background-color: #FCFFF1;
+}
+
+.section-title {
+  font-size: 30px;
+  color: #000;
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+
+/* Usopp intro panel */
+.activities-intro-box {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 40px 50px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 60px;
+}
+
+.activities-intro-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.activities-image {
+  width: 28%;
+  max-width: 260px;
+  height: auto;
+  object-fit: contain;
+}
+
+.activities-text-box {
+    margin-left: 50px;
+  flex: 1;
+}
+
+.activities-subtitle {
+  font-size: 40px;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.activities-text {
+  font-size: 30px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Activity Cards */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+}
+
+.activity-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.activity-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.activity-title {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.activity-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  padding: 6px 9px;
+  border: 2px solid #000;
+  border-radius: 6px;
+  font-family: 'Jockeyone';
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.view-btn {
+  background-color: #E3D095;
+}
+
+.code-btn {
+  background-color: #fff;
+}
+
+.action-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .activities-intro-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .activities-image {
+    width: 60%;
+  }
+
+  .activities-section {
+    padding: 60px 20px;
+  }
+}
+
+.activity-img {
+  width: 100%;
+  height: 220px; /* Adjust height to your image proportions */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* --- Contact Section (Franky) --- */
+.contact-section {
+  background-color: #FCFFF1;
+  padding: 80px 100px;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.franky-img {
+  width: 40%;
+  height: auto;
+  object-fit: contain;
+}
+
+.contact-box {
+  width: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #000;
+}
+
+.contact-title {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #000;
+}
+
+.contact-details {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  line-height: 1.8;
+  font-size: 16px;
+}
+
+.contact-details li strong {
+  color: #000;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .franky-img {
+    width: 70%;
+  }
+
+  .contact-box {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+
+/* --- Anime Footer --- */
+.anime-footer {
+  background: linear-gradient(180deg, #2F6685 0%, #1C2C40 100%);
+  color: #fff;
+  padding-top: 50px;
+  font-family: 'Jockeyone';
+  border-top: 4px solid #E3D095;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 100px 40px 100px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-img {
+  width: 90px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.footer-title {
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.footer-title span {
+  color: #E3D095;
+}
+
+.footer-quote {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #EDEDED;
+}
+
+.footer-center {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-center h3 {
+  font-size: 20px;
+  color: #E3D095;
+  margin-bottom: 10px;
+}
+
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-center ul li {
+  margin-bottom: 6px;
+}
+
+.footer-center ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-center ul li a:hover {
+  color: #E3D095;
+}
+
+.footer-right {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-right h3 {
+  font-size: 20px;
+  color: #E3D095;
+  margin-bottom: 10px;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li a img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.social-links li a img:hover {
+  transform: scale(1.2);
+  filter: brightness(0) invert(0.7);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #E3D095;
+  font-size: 14px;
+  color: #EDEDED;
+}
+
+/* Responsive Footer */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px 30px 40px;
+  }
+  .footer-left, .footer-center, .footer-right {
+    text-align: center;
+  }
+}
+
+
+/* Slider keyframes:
+   - Since .slides width = 500% and each slide = 20%, moving one slide = translateX(-20%)
+   - Keyframe percentages below hold each slide for comfortable time and then transition.
+*/
+@keyframes slide {
+    0%   { transform: translateX(0%); }
+    16%  { transform: translateX(0%); }
+    20%  { transform: translateX(-20%); }
+    36%  { transform: translateX(-20%); }
+    40%  { transform: translateX(-40%); }
+    56%  { transform: translateX(-40%); }
+    60%  { transform: translateX(-60%); }
+    76%  { transform: translateX(-60%); }
+    80%  { transform: translateX(-80%); }
+    96%  { transform: translateX(-80%); }
+    100% { transform: translateX(0%); } /* loop back smoothly */
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px){
+    .text { max-width: 70%; left: 16px; bottom: 18px; }
+    .hero-slider{ height: calc(70vh - var(--header-height)); }
+}
+@media (max-width: 640px){
+    .slides{ animation-duration: 18s; }
+    .text h1{ font-size: 18px; }
+    .text p{ font-size: 13px; }
+    header{ padding: 0 16px; }
+    .logo{ font-size: 20px; }
+}
