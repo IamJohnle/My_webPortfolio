@@ -215,6 +215,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================================================
     
     // Profile "More" button
+        // ==========================================================================
+    // 4. BUTTON ACTION HANDLING
+    // ==========================================================================
+    
+    // Profile "More" button
     const profileBtn = document.getElementById('profile-btn');
     if (profileBtn) {
         profileBtn.addEventListener('click', () => {
@@ -222,6 +227,51 @@ document.addEventListener('DOMContentLoaded', () => {
             if (profileSection) smoothScrollTo(profileSection);
         });
     }
+
+    // Back button in profile section - scroll to home
+    document.querySelectorAll('.back-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Scroll to home section (hero slider)
+            const homeSection = document.getElementById('home');
+            if (homeSection) smoothScrollTo(homeSection);
+        });
+    });
+
+    // Slide buttons with different actions
+    document.querySelectorAll('.see-more-btn').forEach(btn => {
+        const buttonText = (btn.textContent || btn.innerText || '').trim().toLowerCase();
+        
+        switch (true) {
+            case buttonText.includes('anime'):
+                btn.addEventListener('click', () => {
+                    window.open('https://www.crunchyroll.com/one-piece', '_blank', 'noopener');
+                });
+                break;
+                
+            case buttonText.includes('profile'):
+                btn.addEventListener('click', () => {
+                    smoothScrollTo(document.getElementById('profile'));
+                });
+                break;
+                
+            case buttonText.includes('others'):
+                btn.addEventListener('click', () => {
+                    smoothScrollTo(document.getElementById('activities'));
+                });
+                break;
+                
+            case buttonText.includes('contact'):
+                btn.addEventListener('click', () => {
+                    smoothScrollTo(document.getElementById('contact'));
+                });
+                break;
+                
+            default:
+                // Fallback for buttons without specific actions
+                btn.addEventListener('click', () => {});
+                break;
+        }
+    });
 
     // Slide buttons with different actions
     document.querySelectorAll('.see-more-btn').forEach(btn => {
@@ -344,5 +394,6 @@ document.addEventListener('DOMContentLoaded', () => {
             ticking = true;
         }, { passive: true });
     }
+
 
 }); // End of DOMContentLoaded
