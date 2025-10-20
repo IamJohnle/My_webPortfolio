@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JLAltoras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER SECTION WITH LOGO AND NAVIGATION -->
+  <header class="site-header">
+    <!-- MAIN LOGO WITH SPAN FOR STYLING DIFFERENCE -->
+    <h1 class="logo">JL<span>Altoras</span></h1>
+    
+    <!-- MOBILE HAMBURGER MENU TOGGLE -->
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="bar" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
+      <span class="bar" aria-hidden="true"></span>
+    </button>
+
+    <!-- MAIN NAVIGATION CONTAINER -->
+    <div class="nav-container" id="main-nav">
+      <nav class="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#activities">Others</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SLIDER SECTION - MAIN VISUAL COMPONENT -->
+  <section id="home" class="hero-slider">
+    <div class="slides">
+      <!-- SLIDE 1: LUFFY -->
+      <div class="slide">
+        <img src="./pictures/luffy.png" alt="Luffy">
+        <div class="overlay"></div>
+        <div class="text">
+          <h1>HI Im Luffy,</h1>
+          <p>
+            <br>This website maker is awesome
+            <br>His name is John-le and he is my nakama
+            <br>Would you like to join us?
+            <br>We are going to an adventure.
+          </p>
+          <button class="see-more-btn">Anime</button>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: ZORO -->
+      <div class="slide">
+        <img src="./pictures/zoro.png" alt="zoro">
+        <div class="overlay"></div>
+        <div class="text">
+          <h1>HI I'm Zoro,</h1>
+          <p>
+            <br>Wanna know this guy?
+            <br>Come follow me I will take you to the sea
+            <br>Just don't be lost
+          </p>
+          <button class="see-more-btn">Profile</button>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: SANJI -->
+      <div class="slide">
+        <img src="./pictures/sanji.png" alt="sanji">
+        <div class="overlay"></div>
+        <div class="text">
+          <h1>HI I'm Sanji,</h1>
+          <p>
+            <br>I am the cook of the crew
+            <br>And I love cooking, especially girls
+            <br>Would you like to watch anime with me?
+            <br>Mellorine.....
+          </p>
+          <button class="see-more-btn">Anime</button>
+        </div>
+      </div>
+
+      <!-- SLIDE 4: USOPP -->
+      <div class="slide">
+        <img src="./pictures/ussop.png" alt="usopp">
+        <div class="overlay"></div>
+        <div class="text">
+          <h1>HI I'm Usopp,</h1>
+          <p>
+            <br>Craftsman and I like to create something
+            <br>But I'm not good tho hahaha...
+            <br>I make slingshot that can shoot fast than a gun
+            <br>But by the way this guy have works too
+            <br>Wanna see it?
+          </p>
+          <button class="see-more-btn">Others</button>
+        </div>
+      </div>
+
+      <!-- SLIDE 5: FRANKY -->
+      <div class="slide">
+        <img src="./pictures/franky.png" alt="franky">
+        <div class="overlay"></div>
+        <div class="text">
+          <h1>HI I'm Franky,</h1>
+          <p>
+            Suupperrr....
+            <br>I am a shipwright and I am a cyborg
+            <br>I maintain the sunny in good conditions
+            <br>And this guy ask me to make Den Den Mushi
+            <br>For you to have if encase you want to call him
+          </p>
+          <button class="see-more-btn">Contact</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT AREA -->
+  <main>
+    <!-- INTRODUCTION SECTION -->
+    <section class="introduction">
+      <div class="profile-container">
+        <div class="intro-text">
+          <h2 class="intro">
+            Hello! I'm John-Le, a dedicated 3rd-year student pursuing 
+            a Diploma in Information Technology at Davao del Sur State College (DSSC).
+            I am building my skills in software development, networking, and problem-solving
+            to prepare for a career in the tech industry. I'm always eager to learn more and
+            connect with fellow students and professionals.
+          </h2>
+          <!-- SCROLLS TO PROFILE SECTION -->
+          <button class="see-more-btn" id="profile-btn">More</button>
+        </div>
+        <img src="./pictures/zoro.png" alt="zoro" class="intro-pic">
+      </div>
+    </section>
+
+    <!-- PROFILE SECTION -->
+    <section id="profile" class="profile-info">
+      <div class="profile-container">
+        <div class="profile-text">
+          <h2 class="profile-title">Profile</h2>
+          <ul class="profile-details">
+            <li><strong>Name:</strong> John-Le P. Altoras</li>
+            <li><strong>Age:</strong> 23</li>
+            <li><strong>Birthday:</strong> September 10, 2002</li>
+            <li><strong>Birth Place:</strong> Paraiso, Tulunan, North Cotabato</li>
+            <li><strong>Height:</strong> 5'7 ft</li>
+            <li><strong>Weight:</strong> 56 kg</li>
+            <li><strong>Address:</strong> Lopez Jaena Ext., Brgy. Zone 1, Digos City, Davao del Sur</li>
+          </ul>
+          <button class="see-more-btn back-btn">Back</button>
+        </div>
+
+        <!-- PROFILE IMAGE POSITIONED ON THE RIGHT -->
+        <img src="./pictures/Prof3.jpg" alt="Profile picture" class="profile-pic">
+      </div>
+    </section>
+
+    <!-- ACTIVITIES/WORKS SECTION -->
+    <section id="activities" class="activities-section">
+      <h2 class="section-title">Activities</h2>
+
+      <!-- USOPP INTRODUCTION BOX -->
+      <div class="activities-intro-box">
+        <div class="activities-intro-content">
+          <img src="./pictures/ussop.png" alt="Usopp" class="activities-image">
+          <div class="activities-text-box">
+            <h3 class="activities-subtitle">Whaoo....</h3>
+            <p class="activities-text">
+              This is so many work I may die watching this.<br>
+              He is still doing well or not?<br>
+              Take a look... these works must be crazy!
+            </p>
+          </div>
+        </div>          
+      </div>
+
+      <!-- ACTIVITIES GRID - PROJECT CARDS -->
+      <div class="activities-grid">
+        <!-- CARD 1: WEB PROFILE -->
+        <div class="activity-card">
+          <div class="activity-header">
+            <h3 class="activity-title">Activity 1: Web Profile</h3>
+            <div class="activity-actions">
+              <!-- VIEW BUTTON: Opens project in new tab -->
+              <a class="action-btn view-btn" href="./pcodes/codes/index.html" target="_blank" rel="noopener noreferrer">View</a>
+              <!-- CODE BUTTON: Links to GitHub repository -->
+              <a class="action-btn code-btn" href="https://github.com/IamJohnle/ProjectCode.git" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </div>
+          <img src="./pictures/Act1.png" alt="Activity 1 preview" class="activity-img">
+        </div>
+
+        <!-- CARD 2: HOVER EFFECTS -->
+        <div class="activity-card">
+          <div class="activity-header">
+            <h3 class="activity-title">Activity 2: Hover</h3>
+            <div class="activity-actions">
+              <a class="action-btn view-btn" href="./pcodes/practicehover/index.html" target="_blank" rel="noopener noreferrer">View</a>
+              <a class="action-btn code-btn" href="https://github.com/IamJohnle/ProjectCode.git" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </div>
+          <img src="./pictures/act2.png" alt="Activity 2 preview" class="activity-img">
+        </div>
+
+        <!-- CARD 3: ABOUT ME WITH HOVER -->
+        <div class="activity-card">
+          <div class="activity-header">
+            <h3 class="activity-title">Activity 3: About Me (Hover)</h3>
+            <div class="activity-actions">
+              <a class="action-btn view-btn" href="./pcodes/About me Hover/home.html" target="_blank" rel="noopener noreferrer">View</a>
+              <a class="action-btn code-btn" href="https://github.com/IamJohnle/ProjectCode.git" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </div>
+          <img src="./pictures/Act3.png" alt="Activity 3 preview" class="activity-img">
+        </div>
+
+        <!-- CARD 4: DARK MODE IMPLEMENTATION -->
+        <div class="activity-card">
+          <div class="activity-header">
+            <h3 class="activity-title">Activity 4: Dark Mode</h3>
+            <div class="activity-actions">
+              <a class="action-btn view-btn" href="./pcodes/darkmode/index.html" target="_blank" rel="noopener noreferrer">View</a>
+              <a class="action-btn code-btn" href="https://github.com/IamJohnle/ProjectCode.git" target="_blank" rel="noopener noreferrer">Code</a>
+            </div>
+          </div>
+          <img src="./pictures/Act4.png" alt="Activity 4 preview" class="activity-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION WITH FRANKY THEME -->
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <img src="./pictures/franky.png" alt="Franky" class="franky-img">
+
+        <div class="contact-box">
+          <h2 class="contact-title">Contact</h2>
+          <ul class="contact-details">
+            <li><strong>Name:</strong> John-Le P. Altoras</li>
+            <li><strong>Address:</strong> Lopez Jaena Ext., Brgy. Zone 1, Digos City, Davao del Sur</li>
+            <li><strong>Phone:</strong> 09460127773</li>
+            <li><strong>Email:</strong> altorasjohnle@gmail.com</li>
+          </ul>
+
+          <!-- GOOGLE MAPS EMBED -->
+          <div class="contact-map">
+            <iframe
+              src="https://www.google.com/maps?q=Lopez%20Jaena%20Ext%20Digos%20City%20Davao%20del%20Sur&output=embed"
+              allowfullscreen=""
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ANIME-THEMED FOOTER -->
+  <footer class="anime-footer">
+    <div class="footer-container">
+      <!-- LEFT SECTION: BRANDING AND QUOTE -->
+      <div class="footer-left">
+        <img src="./pictures/luffy.png" alt="Luffy" class="footer-img">
+        <h2 class="footer-title">JL<span>Altoras</span></h2>
+        <p class="footer-quote">
+          "I'm gonna be the King of Web Developers!" <br>
+          — Inspired by Monkey D. Luffy 🏴‍☠️
+        </p>
+      </div>
+
+      <!-- CENTER SECTION: QUICK NAVIGATION -->
+      <div class="footer-center">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="others.html">Others</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- RIGHT SECTION: SOCIAL MEDIA LINKS -->
+      <div class="footer-right">
+        <h3>Connect With Me</h3>
+        <ul class="social-links">
+          <li><a href="#"><img src="./pictures/fb.png" alt="Facebook"></a></li>
+          <li><a href="#"><img src="./pictures/github.png" alt="GitHub"></a></li>
+          <li><a href="#"><img src="./pictures/email.png" alt="Email"></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- FOOTER BOTTOM: COPYRIGHT -->
+    <div class="footer-bottom">
+      <p>© 2025 John-Le P. Altoras | All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

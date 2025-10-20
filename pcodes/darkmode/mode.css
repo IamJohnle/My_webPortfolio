@@ -1,0 +1,57 @@
+/* Default Light Mode */
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 40px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 200px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+
+/* Button style */
+
+button {
+    padding: 10px 20px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #0078ff;
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #005fcc;
+    transform: scale(1.05);
+}
+
+
+
+
+body.dark-mode {
+    background-color: #181616;
+    color: #ffffff;
+}
+
+body.dark-mode button {
+    background-color: #e0e0d4;
+    color: #000000;
+}
+
+body.dark-mode button:hover {
+    background-color: #1b1b1a;
+}
